@@ -7,6 +7,6 @@ const canvas = document.createElement('canvas')
 canvas.width = 500
 canvas.height = 500
 
-noisify(canvas, (x, y) => 255 * (simplex.gen(x / 128, y / 128) + 1) / 2)
+noisify(canvas, (x, y) => simplex.gen(x / 128, y / 128))
 
 document.body.appendChild(canvas)
