@@ -1,6 +1,6 @@
 {
   "name": "noise-canvas",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
@@ -8,9 +8,17 @@
     "chai": "^4.1.2",
     "mocha": "^5.0.4",
     "nyc": "^11.4.1",
-    "tumult": "^3.0.3"
+    "tumult": "^3.0.3",
+    "semantic-release": "^15.0.2"
   },
   "dependencies": {
     "detect-node": "^2.0.3"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ScottyFillups/noise-canvas.git"
   }
 }
