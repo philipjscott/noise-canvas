@@ -2,7 +2,7 @@
 
 #### Noisify a canvas!
 
-![Noise demo](https://unpkg.com/vizplex@1.0.1/images/demo.png)
+![Noise demo](https://unpkg.com/noise-canvas@1.0.1/images/demo.png)
 
 Maps the output of a noise function, with a range of [-1, 1], to [0, 255], which is then applied to a canvas using `ctx.putImageData`. Supports both Node.js (via the [canvas](https://www.npmjs.com/package/canvas) package) and the browser!
 
