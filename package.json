@@ -4,17 +4,20 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "canvas": "^2.0.0-alpha.11",
+    "canvas": "^1.6.0",
     "chai": "^4.1.2",
+    "jsdom": "^11.6.2",
     "mocha": "^5.0.4",
     "nyc": "^11.4.1",
-    "tumult": "^3.0.3",
-    "semantic-release": "^15.0.2"
+    "semantic-release": "^15.0.2",
+    "tumult": "^3.0.3"
   },
   "dependencies": {
     "detect-node": "^2.0.3"
   },
   "scripts": {
+    "test": "nyc mocha './{,!(node_modules)/**}/!(browser).test.js' --reporter spec",
+    "functional": "parcel ./test/functional/browser.test.html --open",
     "semantic-release": "semantic-release"
   },
   "repository": {
