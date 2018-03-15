@@ -1,7 +1,18 @@
 {
   "name": "noise-canvas",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
+  "description": "Noisify a canvas!",
   "main": "index.js",
+  "keyworks": [
+    "noise",
+    "canvas",
+    "simplex",
+    "simplex noise",
+    "perlin",
+    "perlin noise",
+    "procedural",
+    "procedural generation"
+  ],
   "license": "MIT",
   "devDependencies": {
     "canvas": "^1.6.0",

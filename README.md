@@ -1,6 +1,6 @@
 # noise-canvas
 
-#### Noisify a canvas!
+Noisify a canvas!
 
 ![Noise demo](https://unpkg.com/noise-canvas@1.0.1/images/demo.png)
 
