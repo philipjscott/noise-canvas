@@ -3,7 +3,7 @@
   "version": "0.0.0-development",
   "description": "Noisify a canvas!",
   "main": "index.js",
-  "keyworks": [
+  "keywords": [
     "noise",
     "canvas",
     "simplex",

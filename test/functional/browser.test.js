@@ -1,12 +1,26 @@
 const noisify = require('../../')
 const { Simplex2 }  = require('tumult')
 
-const simplex = new Simplex2('ayylmao')
-const canvas = document.createElement('canvas')
+const noise1 = new Simplex2('some seed')
+const noise2 = new Simplex2('another seed')
+const noise3 = new Simplex2('foobar')
 
-canvas.width = 200
+const canvas = document.createElement('canvas')
+const rgbaCanvas = document.createElement('canvas')
+
+canvas.width = 300
 canvas.height = 200
 
-noisify(canvas, (x, y) => simplex.gen(x / 32, y / 32))
+rgbaCanvas.width = 300
+rgbaCanvas.height = 200
+
+noisify(canvas, (x, y) => noise1.gen(x / 64, y / 64))
+noisify(rgbaCanvas, [
+  (x, y) => noise1.gen(x / 64, y / 64),
+  ,
+  (x, y) => noise2.gen(x / 64, y / 64),
+  (x, y) => noise3.gen(x / 64, y / 64)
+])
 
 document.body.appendChild(canvas)
+document.body.appendChild(rgbaCanvas)

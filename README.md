@@ -32,11 +32,25 @@ noisify(canvas, (x, y) => simplex(x / 128, y / 128))
 document.body.appendChild(canvas)
 ```
 
+You can also specify noise functions for each channel (RGBA). If no function is supplied, it defaults to `() => 1`.
+
+```js
+const noise1 = new Simplex2('some seed')
+const noise2 = new Simplex2('another seed')
+const noise3 = new Simplex2('another one')
+
+noisify(canvas, [
+  noise1.gen.bind(noise1),
+  noise2.gen.bind(noise2),
+  noise3.gen.bind(noise3)
+])
+```
+
 ## API
 
 #### noisify(canvas, noiseFn, config)
 
 * canvas: The canvas element or canvas DOM selector string
-* noiseFn: A two-dimensional noise function with a range of [-1, 1]
+* noiseFn: A two-dimensional noise function, or an array of two-dimensional noise functions, with a range of [-1, 1]
 * config: 
   * ImageData: If using node-canvas, the ImageData constructor (`canvas.ImageData`)
